@@ -1,3 +1,5 @@
+let history = [];
+
 function calculate(operation) {
   let a = document.getElementById("num1").value;
   let b = document.getElementById("num2").value;
@@ -26,4 +28,17 @@ function calculate(operation) {
   if (operation === "/") result = a / b;
 
   document.getElementById("result").textContent = result;
+
+  // Task 7: добавляем строку в историю, например "10 + 5 = 15"
+  history.push(a + " " + operation + " " + b + " = " + result);
+  showHistory();
+}
+
+// Показываем историю на странице
+function showHistory() {
+  let list = document.getElementById("historyList");
+  list.innerHTML = "";
+  for (let i = 0; i < history.length; i++) {
+    list.innerHTML += "<li>" + history[i] + "</li>";
+  }
 }
