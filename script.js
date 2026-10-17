@@ -1,4 +1,6 @@
-let history = [];
+// Task 8: берём историю из localStorage (если её нет, будет пустой массив)
+let history = JSON.parse(localStorage.getItem("history")) || [];
+showHistory();
 
 function calculate(operation) {
   let a = document.getElementById("num1").value;
@@ -31,6 +33,9 @@ function calculate(operation) {
 
   // Task 7: добавляем строку в историю, например "10 + 5 = 15"
   history.push(a + " " + operation + " " + b + " = " + result);
+
+  // Task 8: сохраняем историю в localStorage
+  localStorage.setItem("history", JSON.stringify(history));
   showHistory();
 }
 
