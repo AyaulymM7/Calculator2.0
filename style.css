@@ -1,0 +1,84 @@
+/* Task 6: калькулятор по центру страницы */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9eef6;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 320px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 20px;
+  background: #2f5bea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.main-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  background: #2f5bea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttons button:hover,
+.main-button:hover {
+  background: #2448c4;
+}
+
+.error {
+  color: red;
+}
+
+.logout {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
