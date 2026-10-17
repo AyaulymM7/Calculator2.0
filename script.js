@@ -1,3 +1,8 @@
+// Task 12: если пользователь не вошёл, отправляем на страницу входа
+if (localStorage.getItem("user") === null) {
+  window.location.href = "login.html";
+}
+
 // Task 8: берём историю из localStorage (если её нет, будет пустой массив)
 let history = JSON.parse(localStorage.getItem("history")) || [];
 showHistory();
@@ -46,4 +51,10 @@ function showHistory() {
   for (let i = 0; i < history.length; i++) {
     list.innerHTML += "<li>" + history[i] + "</li>";
   }
+}
+
+// Выход: удаляем пользователя и идём на страницу входа
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
 }
