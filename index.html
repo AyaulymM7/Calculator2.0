@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Calculator</h1>
+
+    <label for="num1">First number</label>
+    <input id="num1" type="text">
+
+    <label for="num2">Second number</label>
+    <input id="num2" type="text">
+
+    <div class="buttons">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+    </div>
+
+    <p id="error" class="error"></p>
+
+    <p>Result: <b id="result"></b></p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
